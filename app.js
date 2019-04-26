@@ -8,9 +8,9 @@ app.beaconRegions =
 [
 	{
 		id: 'page-feet',
-		uuid:'B9407F30-F5F8-466E-AFF9-25556B57FE6D',
-		major: 3560,
-		minor: 36810
+		uuid:'74278BDA-B644-4520-8F0C-720EAF059935',
+		major: 0,
+		minor: 0
 	},
 	{
 		id: 'page-shoulders',
@@ -117,7 +117,7 @@ app.didRangeBeaconsInRegion = function(pluginResult)
 	//console.log('ranged beacon: ' + pageId + ' ' + beacon.proximity)
 
 	// If the beacon is close and represents a new page, then show the page.
-	if ((beacon.proximity == 'ProximityImmediate')
+	if ((beacon.proximity == 'ProximityImmediate' || beacon.proximity == 'ProximityNear')
 		&& app.currentPage == 'page-default')
 	{
 		app.gotoPage(pageId)
