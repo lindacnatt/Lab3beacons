@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<template>
+<head>
     <meta charset="UTF-8">
     <title>title</title>
   </head>
@@ -22,7 +21,7 @@
     })
 
     pubnubDemo.subscribe({
-      channels: ['demo_tutorial']
+    channels: ['demo_tutorial']
     });
 
     pubnubDemo.publish({ message: { "color" : "blue" }, channel: 'demo_tutorial' });
@@ -33,6 +32,9 @@
             var alpha   = event.alpha; //z axis rotation [0,360)
             var beta     = event.beta; //x axis rotation [-180, 180]
             var gamma   = event.gamma; //y axis rotation [-90, 90]
+        
+        
+        
         
             //Check if absolute values have been sent
             if (typeof event.webkitCompassHeading !== "undefined") {
@@ -50,4 +52,10 @@
     <p id=”heading”></p>
     
   </body>
-</html>
+    
+</template>
+<script>
+export default {
+    
+}
+</script>
